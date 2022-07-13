@@ -39,3 +39,5 @@ def delete(id):
     sql = "DELETE  FROM users WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+    
+    # UPDATE
