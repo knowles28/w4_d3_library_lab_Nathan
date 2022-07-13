@@ -18,7 +18,7 @@ def select_all():
     results = run_sql(sql)
     for row in results:
         author = author_repository.select(row['author_id'])
-        book = Book(row['title'], author, row['total_pages'], row['id'])
+        book = Book(row['title'], row['total_pages'], author, row['id'])
         books.append(book)
     return books
 
@@ -36,7 +36,7 @@ def select(id):
     
 
 def delete(id):
-    sql = "DELETE  FROM users WHERE id = %s"
+    sql = "DELETE  FROM books WHERE id = %s"
     values = [id]
     run_sql(sql, values)
     

@@ -6,7 +6,11 @@
     {{book.title}}: {{book.author.first_name}} {{book.author.last_name}} 
     <br>
     {{book.total_pages}} pages 
+    <br>
+    <form action="/books/{{book.id}}/delete" method="post">
+        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:rgb(105, 3, 3)" aria-hidden="true"></i></button>
     <hr>
+
 
 {% endfor %}
 {% endblock content %}
