@@ -22,8 +22,8 @@ def select_all():
 
 def select(id):
     author = None
-    sql = "SELECT * FROM users WHERE id = %s"
-    values = id
+    sql = "SELECT * FROM authors WHERE id = %s"
+    values = [id]
     result = run_sql(sql, values)[0]
     
     if result is not None:
