@@ -17,8 +17,8 @@ def select_all():
     sql = "SELECT * FROM books"
     results = run_sql(sql)
     for row in results:
-        author = author_repository.select(row['author_id'])
-        book = Book(row['title'], row['total_pages'], author, row['id'])
+        # author = author_repository.select(row['author_id'])
+        book = Book(row['title'], row['total_pages'], row['id'])
         books.append(book)
     return books
 

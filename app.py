@@ -1,9 +1,9 @@
 from flask import Flask, render_template
-# from controllers.library_controller import library_blueprint
+from controllers.library_controller import books_blueprint
 
 app = Flask(__name__)
 
-app.register_blueprint(library_blueprint)
+app.register_blueprint(books_blueprint)
 
 @app.route('/')
 def home():
